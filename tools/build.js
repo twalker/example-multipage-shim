@@ -5,7 +5,7 @@
 
     normalizeDirDefines: true,
     removeCombined: true,
-
+    enforceDefine: true,
     //out: '../www-built/HELLOWORLD.js',
     //baseUrl: "../www/js",
     //skipDirOptimize: true,
@@ -15,7 +15,7 @@
         //First set up the common build layer.
         {
             //module names are relative to baseUrl
-            name: '../common',
+            name: 'common',
             //List common dependencies here. Only need to list
             //top level dependencies, "include" will find
             //nested dependencies.
@@ -40,13 +40,13 @@
         {
             //module names are relative to baseUrl/paths config
             name: 'app/main1',
-            exclude: ['../common']
+            exclude: ['common']
         },
 
         {
             //module names are relative to baseUrl
             name: 'app/main2',
-            exclude: ['../common']
+            exclude: ['common']
         }
 
     ]

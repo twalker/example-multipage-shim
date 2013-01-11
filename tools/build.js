@@ -2,6 +2,15 @@
     appDir: '../www',
     mainConfigFile: '../www/js/common.js',
     dir: '../www-built',
+
+    normalizeDirDefines: true,
+    removeCombined: true,
+
+    //out: '../www-built/HELLOWORLD.js',
+    //baseUrl: "../www/js",
+    //skipDirOptimize: true,
+    optimize: 'none',
+
     modules: [
         //First set up the common build layer.
         {

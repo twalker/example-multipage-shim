@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>standalone</title>
+		<!--
+
+		-->
+		<script src="js/lib/require.js" data-main="js/main-standalone.js"></script>
+
+		<!--
+			<script src="../www-built/js/main-standalone-optimized.js"></script>
+		-->
+
+	</head>
+	<body>
+		<p>
+			This standalone page is for use in iframe inside an app.
+			It uses almond and only includes the dependencies it needs (it's own build-standalone), not those of the overall app.
+			It's an alternative to forcing the parent app into a layered build,
+			instead of a single script out build.
+		</p>
+	</body>
+</html>

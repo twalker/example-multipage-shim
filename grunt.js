@@ -89,9 +89,29 @@ module.exports = function(grunt) {
 		}
 	});
 
+	grunt.registerTask('requirejs-standalone', 'Build standalone requirejs package', function(){
+		// var standalone = grunt.file.readJSON('build-standalone.js');
+		var requirejs = require('requirejs');
+		var done = this.async();
+		var options = {
+			baseUrl: 'www/js',
+			mainConfigFile: 'www/js/main-standalone.js',
+			out: 'www-built/js/main-standalone-optimized.js',
+			name: 'lib/almond',
+			include: 'main-standalone',
+			//wrap: false,
+			optimize: 'uglify2', // 'none'
+		};
+
+		requirejs.optimize(options, function(response){
+			grunt.log.write(response);
+			done()
+		});
+	});
+
 	// load non-stock tasks
 	grunt.loadNpmTasks('grunt-contrib');
 
-	grunt.registerTask("default", "requirejs");
+	grunt.registerTask("default", "requirejs requirejs-standalone");
 
 };

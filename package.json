@@ -6,6 +6,7 @@
   "main": "main.js",
   "dependencies": {
     "grunt": "~0.3.17",
-    "grunt-contrib": "~0.3.0"
+    "grunt-contrib": "~0.3.0",
+    "requirejs": "~2.1.2"
   }
 }
